@@ -7,7 +7,7 @@ module.exports = defineConfig([
   expoConfig,
   eslintPluginPrettierRecommended,
   {
-    ignores: ["dist/*"],
+    ignores: ["dist/*", "icons/*"],
     plugins: {
       "react-native": require("eslint-plugin-react-native"),
       "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),

@@ -1,9 +1,8 @@
-import { Text, View } from "react-native";
+import { useUserStore } from "@/store/userStore";
+import { Redirect } from "expo-router";
 
 export default function Index() {
-  return (
-    <View>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  const { user } = useUserStore();
+
+  return <Redirect href={user ? "/(tabs)/home" : "/auth/login"} />;
 }
